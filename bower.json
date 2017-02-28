@@ -1,0 +1,22 @@
+{
+  "name": "card-view-editor",
+  "homepage": "https://github.com/guisoares2011/card-view-editor",
+  "authors": [
+    "Guilherme Soares <guisoares80@gmail.com>"
+  ],
+  "description": "An web plugin to create a kind of card view and edit and order them as you like.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "card-view", "order items"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+
+  }
+}

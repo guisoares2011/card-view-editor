@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grid Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./src/cardview.css" rel="stylesheet">
+    <style type="text/css">
+    	#destinations{
+    		width: 340px;
+    		height: 700px;
+    		
+    	}
+    	#mobile-skech {
+    		height: 660px;
+    		width: 360px;
+    		overflow-x: hidden;
+    		float: left;
+    	}
+    	
+    	#destinations .card-view{
+    		 /* Add shadows to create the "card" effect */
+    		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    		/*transition: 0.3s;*/
+    		height: 200px !important;
+    		margin-bottom: 20px;
+    	}
+
+
+    	#destinations .card-view:hover{
+    		 /* Add shadows to create the "card" effect */
+    		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    		/*transition: 0.3s;*/
+    		height: 200px !important;
+    	}
+
+    	#destinations .card-view.card-selected {
+    		border: 1px solid #5c9472;
+    	}
+    	
+
+    	#destinations .card-view > div {
+    		position: relative;
+    		
+    		float: left;
+    	}
+
+    	#destinations  .card-view img{
+    		height: 200px;
+    		pointer-events: none;
+    		float: left;
+    	}
+
+    	#destinations  .card-view p{
+    		position: absolute;
+    		color: #FFFFFF;
+    		font-size: 30px;
+    		font-weight: bold;
+    		width: 95%;
+    		text-align: right;
+    	}
+
+    	.float-button{
+    		position: absolute;
+    		width: 60px;
+    		height: 60px;
+    		border-radius: 60px;
+    		background-color: #2bb569;
+    		color: white;
+    		font-size: 30px;
+    		text-align: center;;
+    		line-height: 60px;
+    		bottom: 10%;
+    		right: 10%;
+    	}
+    	.float-button.delete-button{ right: 15%; background-color: red;}
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+	  <div class="float-button" id="float-button">+</div>
+	  <div class="float-button delete-button" id="delete-button">-</div>
+      <div class="page-header">
+        <h1>Card View</h1>
+        <p class="lead">Create a list of cards and order as you like :)</p>
+      </div>
+      <div class="row">	
+      		<div class="col-md-12">
+      			<h2>My Card List</h2>
+      		</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+        	<div id="mobile-skech">
+	        	<div id="destinations">
+	        		<div class="card-view" data-card-title="Teste 1"></div>
+	        		<div class="card-view" data-card-title="Teste 2"></div>
+	        	</div>
+        	</div>
+        </div>
+        <div class="col-md-4 col-md-offset-2">
+        	<form>
+
+        	  <div class="form-group">
+        	    <div id="cover-container"></div>
+        	    <input type="file" id="cover">
+        	  </div>
+
+        	  <div class="form-group">
+        	    <label for="exampleInputEmail1">Title</label>
+        	    <input type="text" class="form-control" id="title" placeholder="Title Card">
+        	  </div>
+
+        	  <div class="form-group">
+        	    <label for="exampleInputPassword1">Description</label>
+        	    <textarea class="form-control" id="description"></textarea>
+        	  </div>
+	  
+        	  <button type="submit" class="btn btn-default">Save</button>
+        	</form>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bower_components/js-loadimage/js/load-image.all.min.js"></script>
+    <script type="text/javascript" src="./src/cardview.js"></script>
+    <script type="text/javascript" src="./example.js"></script>
+  </body>
+</html>
